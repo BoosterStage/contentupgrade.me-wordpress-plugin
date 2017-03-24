@@ -1,0 +1,69 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+ .contentupgrade-me-admin .info {
+	background: #fff;
+	width: 80%;
+	padding: 1em;
+	margin: 1em 0;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.contentupgrade-me-admin .nowrap{
+  white-space: nowrap;
+}
+
+.contentupgrade-me-admin .info h1 {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.contentupgrade-me-admin h1,
+.contentupgrade-me-admin p {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
+.contentupgrade-me-admin .button.button-large {
+	font-size: 140%;
+	/*font-weight: bold;*/
+	height: auto;
+	padding: .5em 2em;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+  border-radius: 30px;
+  background-color: #1DBA64;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+
+.contentupgrade-me-admin p img{
+  max-width: 100%;
+  height: auto;
+}
+
+.contentupgrade-me-admin .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.contentupgrade-me-admin .video-container iframe,
+.contentupgrade-me-admin .video-container object,
+.contentupgrade-me-admin .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
