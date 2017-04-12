@@ -16,7 +16,7 @@
  * Plugin Name:       Lead Magnets by ContentUpgrade.me
  * Plugin URI:        https://contentupgrade.me/wordpress
  * Description:       ContentUpgrade.me lets you upload your lead magnets once and embed it everywhere.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Ryan Crispin Heneise
  * Author URI:        https://contentupgrade.me/
  * License:           GPL-2.0+

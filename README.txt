@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Lead Magnets by ContentUpgrade.me ===
 Contributors: mysmallidea
 Tags: Lead Magnet, Content Upgrade, List building, Lead Generation, Mailchimp, Drip
 Requires at least: 3.0.1
@@ -45,9 +45,11 @@ Yes, you can use a lead magnet multiple times, on multiple pages. You can even u
 
 = Do I need to create an account on ContentUpgrade.me? =
 
-No, you don't need to create an account in order to embed a lead magnet. You can embed any ContentUpgrade.me lead magnet in your Wordpress post simply by pasting the URL.
+Yes, you do need to create an account on ContentUpgrade.me in order to create a lead magnet. Once you have created your lead magnet you can embed it into your WordPress posts simply by pasting the URL where you want the lead magnet to appear.
 
-In order to upload your own lead magnets, you do need to create an account on ContentUpgrade.me.
+= Where can I sign up? =
+
+Glad you asked! Just go to https://contentupgrade.me to sign up.
 
 == Screenshots ==
 

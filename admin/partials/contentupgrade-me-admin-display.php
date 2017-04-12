@@ -27,8 +27,6 @@
 		<span class="nowrap">anywhere, effortlessly.</span>
 	</h1>
 
-
-
 	<div class="" style="max-width: 640px; margin: 1em auto;">
 		<div class="video-container">
 			<iframe width="640" height="360" src="https://www.youtube.com/embed/3I5nFa6VQPM" frameborder="0" allowfullscreen></iframe>
@@ -36,7 +34,7 @@
 	</div>
 
 	<p>
-		<a href="https://contentupgrade.me/app/new" class="button button-primary button-large", target="_blank">Create a new ContentUpgrade</a>
+		<a href="https://contentupgrade.me/app/new?utm_source=wordpress-plugin" class="button button-primary button-large", target="_blank">Create a new ContentUpgrade</a>
 	</p>
 
 </div>

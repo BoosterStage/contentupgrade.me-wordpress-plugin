@@ -73,7 +73,7 @@ class ContentUpgrade_Me_Plugin_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-public.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,8 +96,8 @@ class ContentUpgrade_Me_Plugin_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-public.js', array( 'jquery' ), $this->version, false );
-    wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/jquery.oembed.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-public.js', array( 'jquery' ), $this->version, false );
+    // wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/jquery.oembed.js', array( 'jquery' ), $this->version, false );
 
 	}
 

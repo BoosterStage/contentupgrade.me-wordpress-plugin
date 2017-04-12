@@ -69,7 +69,7 @@ class ContentUpgrade_Me_Plugin {
 	public function __construct() {
 
 		$this->ContentUpgrade_Me_Plugin = 'contentupgrade-me';
-		$this->version = '1.0.0';
+		$this->version = '1.0.1';
 
 		$this->load_dependencies();
 		$this->set_locale();
