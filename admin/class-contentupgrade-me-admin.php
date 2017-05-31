@@ -113,7 +113,7 @@ class ContentUpgrade_Me_Plugin_Admin {
 	 * @param      int       $position
 	 */
 	public function add_admin_menu() {
-	    add_menu_page(
+			add_menu_page(
 				'ContentUpgrade.me',
 				__('ContentUpgrade', 'contentupgrade-me'),
 				'manage_options',
@@ -122,8 +122,24 @@ class ContentUpgrade_Me_Plugin_Admin {
 				plugin_dir_url( dirname( __FILE__ ) ) . 'admin/images/contentupgrade-me.png'
 			);
 
-      define('CONTENTUPGRADE_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+			define('CONTENTUPGRADE_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 	}
+
+  /**
+	 * Add settings link.
+	 *
+	 * @since    1.0.2
+	 */
+	public function add_action_links ( $links ) {
+		/*
+		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
+		*/
+		$settings_link = array(
+			'<a href="' . admin_url( 'admin.php?page=' . $this->ContentUpgrade_Me_Plugin ) . '">' . __('Settings', $this->ContentUpgrade_Me_Plugin) . '</a>',
+		);
+		return array_merge(  $settings_link, $links );
+	}
+
 
 	/**
 	 * Callback function for the admin settings page.
@@ -132,9 +148,9 @@ class ContentUpgrade_Me_Plugin_Admin {
 	 */
 	public function create_admin_interface(){
 
-    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/header.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/header.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/contentupgrade-me-admin-display.php';
-    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/footer.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/footer.php';
 
 	}
 

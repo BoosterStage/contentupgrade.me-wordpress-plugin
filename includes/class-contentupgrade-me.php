@@ -69,7 +69,7 @@ class ContentUpgrade_Me_Plugin {
 	public function __construct() {
 
 		$this->ContentUpgrade_Me_Plugin = 'contentupgrade-me';
-		$this->version = '1.0.1';
+		$this->version = '1.0.2';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -152,8 +152,9 @@ class ContentUpgrade_Me_Plugin {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-    $this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
 
+		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'add_action_links' );
 	}
 
 	/**
@@ -170,7 +171,7 @@ class ContentUpgrade_Me_Plugin {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-    $this->loader->add_action( 'init', $plugin_public, 'add_provider');
+		$this->loader->add_action( 'init', $plugin_public, 'add_provider');
 
 	}
 

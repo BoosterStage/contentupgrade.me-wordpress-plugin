@@ -2,7 +2,7 @@
 Contributors: mysmallidea
 Tags: Lead Magnet, Content Upgrade, List building, Lead Generation, Mailchimp, Drip
 Requires at least: 3.0.1
-Tested up to: 4.7.3
+Tested up to: 4.8
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -57,6 +57,14 @@ Glad you asked! Just go to https://contentupgrade.me to sign up.
 2. Embedding a lead magnet in Medium.com
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Added a settings link under the plugin on the Plugins page. 
+
+= 1.0.1 =
+
+* Fixed a bug that was requiring unneeded css and js files.
 
 = 1.0 =
 
