@@ -27,9 +27,9 @@ class ContentUpgrade_Me_Plugin_Public {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $ContentUpgrade_Me_Plugin    The ID of this plugin.
+	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
-	private $ContentUpgrade_Me_Plugin;
+	private $plugin_name;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class ContentUpgrade_Me_Plugin_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $ContentUpgrade_Me_Plugin       The name of the plugin.
+	 * @param      string    $plugin_name       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $ContentUpgrade_Me_Plugin, $version ) {
+	public function __construct( $plugin_name, $version ) {
 
-		$this->ContentUpgrade_Me_Plugin = $ContentUpgrade_Me_Plugin;
+		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
 	}
@@ -73,7 +73,7 @@ class ContentUpgrade_Me_Plugin_Public {
 		 * class.
 		 */
 
-		// wp_enqueue_style( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-public.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,8 +96,8 @@ class ContentUpgrade_Me_Plugin_Public {
 		 * class.
 		 */
 
-		// wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-public.js', array( 'jquery' ), $this->version, false );
-    // wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/jquery.oembed.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-public.js', array( 'jquery' ), $this->version, false );
+    // wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/jquery.oembed.js', array( 'jquery' ), $this->version, false );
 
 	}
 

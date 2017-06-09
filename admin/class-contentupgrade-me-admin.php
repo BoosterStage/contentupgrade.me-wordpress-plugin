@@ -27,9 +27,9 @@ class ContentUpgrade_Me_Plugin_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $ContentUpgrade_Me_Plugin    The ID of this plugin.
+	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
-	private $ContentUpgrade_Me_Plugin;
+	private $plugin_name;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class ContentUpgrade_Me_Plugin_Admin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $ContentUpgrade_Me_Plugin       The name of this plugin.
+	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $ContentUpgrade_Me_Plugin, $version ) {
+	public function __construct( $plugin_name, $version ) {
 
-		$this->ContentUpgrade_Me_Plugin = $ContentUpgrade_Me_Plugin;
+		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
 	}
@@ -73,7 +73,7 @@ class ContentUpgrade_Me_Plugin_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/contentupgrade-me-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class ContentUpgrade_Me_Plugin_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->ContentUpgrade_Me_Plugin, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/contentupgrade-me-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
@@ -125,20 +125,23 @@ class ContentUpgrade_Me_Plugin_Admin {
 			define('CONTENTUPGRADE_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 	}
 
-  /**
+	/**
 	 * Add settings link.
 	 *
 	 * @since    1.0.2
 	 */
-	public function add_action_links ( $links ) {
+	public function add_action_links( $links ) {
 		/*
 		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
 		*/
 		$settings_link = array(
-			'<a href="' . admin_url( 'admin.php?page=' . $this->ContentUpgrade_Me_Plugin ) . '">' . __('Settings', $this->ContentUpgrade_Me_Plugin) . '</a>',
+		 '<a href="' . admin_url( 'admin.php?page=' . $this->plugin_name ) . '">' . __('Settings',   $this->plugin_name) . '</a>',
 		);
 		return array_merge(  $settings_link, $links );
+
 	}
+
+
 
 
 	/**

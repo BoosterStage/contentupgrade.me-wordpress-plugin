@@ -58,9 +58,13 @@ Glad you asked! Just go to https://contentupgrade.me to sign up.
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Fixed a bug where settings link was showing up in the wrong place.
+
 = 1.0.2 =
 
-* Added a settings link under the plugin on the Plugins page. 
+* Added a settings link under the plugin on the Plugins page.
 
 = 1.0.1 =
 

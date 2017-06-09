@@ -44,9 +44,9 @@ class ContentUpgrade_Me_Plugin {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $ContentUpgrade_Me_Plugin    The string used to uniquely identify this plugin.
+	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
-	protected $ContentUpgrade_Me_Plugin;
+	protected $plugin_name;
 
 	/**
 	 * The current version of the plugin.
@@ -68,8 +68,8 @@ class ContentUpgrade_Me_Plugin {
 	 */
 	public function __construct() {
 
-		$this->ContentUpgrade_Me_Plugin = 'contentupgrade-me';
-		$this->version = '1.0.2';
+		$this->plugin_name = 'contentupgrade-me';
+		$this->version = '1.0.3';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -148,13 +148,22 @@ class ContentUpgrade_Me_Plugin {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new ContentUpgrade_Me_Plugin_Admin( $this->get_ContentUpgrade_Me_Plugin(), $this->get_version() );
+		$plugin_admin = new ContentUpgrade_Me_Plugin_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
 
-		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'add_action_links' );
+
+    // echo 'plugin_action_links_' . $this->get_plugin_name();
+    // echo plugin_basename(__FILE__);
+    // echo $plugin_admin;
+    // $plugin_basename = $this->get_plugin_name() ;
+    // $plugin_basename = 'lead-magnets-by-contentupgrademe';
+    $plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' );
+
+    $this->loader->add_filter( 'plugin_action_links_' . $plugin_basename, $plugin_admin, 'add_action_links' );
+
 	}
 
 	/**
@@ -166,7 +175,7 @@ class ContentUpgrade_Me_Plugin {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new ContentUpgrade_Me_Plugin_Public( $this->get_ContentUpgrade_Me_Plugin(), $this->get_version() );
+		$plugin_public = new ContentUpgrade_Me_Plugin_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -191,8 +200,8 @@ class ContentUpgrade_Me_Plugin {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_ContentUpgrade_Me_Plugin() {
-		return $this->ContentUpgrade_Me_Plugin;
+	public function get_plugin_name() {
+		return $this->plugin_name;
 	}
 
 	/**
